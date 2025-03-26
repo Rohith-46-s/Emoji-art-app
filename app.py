@@ -35,5 +35,9 @@ def upload_to_imgur(filepath):
         response = requests.post("https://api.imgur.com/3/upload", headers=headers, files={"image": file})
         return response.json()["data"]["link"]
 
+import os
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    port = int(os.environ.get("PORT", 5000))  # Get port from Railway's environment variable
+    app.run(host='0.0.0.0', port=port)
+
