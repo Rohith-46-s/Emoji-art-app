@@ -6,4 +6,4 @@ diffusers
 Pillow
 requests
 transformers
-
+accelerate
