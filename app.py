@@ -8,7 +8,7 @@ import requests
 app = Flask(__name__)
 
 # Load Stable Diffusion Model (Optimized for Railway)
-model = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5", torch_dtype=torch.float16)
+model = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2-1-base", torch_dtype=torch.float16)
 model.to("cuda" if torch.cuda.is_available() else "cpu")
 
 @app.route('/generate', methods=['POST'])
