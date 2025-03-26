@@ -5,3 +5,5 @@ torchaudio
 diffusers
 Pillow
 requests
+transformers
+
